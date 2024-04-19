@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+#Tiempo de prueba: 50 minutos 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Objetivo: Construir una aplicación web react que muestre el listado de días festivos en Colombia y México para el 2024
 
-## Available Scripts
+#Instrucciones:
 
-In the project directory, you can run:
+1. Crea un react app 
 
-### `npm start`
+2. Crea tres vistas, cada una con su respectiva URL usando la librería "react-router-dom" 
+Home | Ruta: / 
+Colombia | Ruta: /Colombia
+Mexico | Ruta: /Mexico
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Home debe renderizar una vista con links o botones que permitan al usuario ingresar a la URL de Colombia o a la ruta de México 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Las urls de Colombia y México, deben renderizar una vista que se conecte al API de Calendarific, extraiga la información de todos los días festivos del 2024 para el país en cuestión y muestre una tabla con todos los festivos del país. (Hay que asumir que esta información es cambiante por lo que se debe consultar el API siempre que se renderiza la vista)
+ 
+La tabla debe contener las siguientes columnas: 
+Nombre de Festivo
+Fecha (Formato: “Año / Mes / Dia” )
+Descripción
 
-### `npm test`
+La tabla debe estar en orden descendente segun la fecha. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La fila que contenga el próximo festivo, asumiendo la fecha actual como la fecha en que se realiza la prueba, debe tener texto Rojo
 
-### `npm run build`
+Por último, cada vista debe permitir al usuario regresar la ruta de Home
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Otros:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Se puede usar cualquier tipo de librería o toolkit frontend como bootstrap o ant. Entre más agradable visualmente la aplicación, mejor. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La documentación del API de Calendarific es encuentra en el siguiente link: https://calendarific.com/api-documentation
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El API KEY de Calendarific: DU6OKC0XfoP5aESXBw5Di4WttXlWftqT
